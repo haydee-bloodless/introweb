@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía básica HTML - Datos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script> </script>
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="index.html">Guía básica HTML 5</a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a id="btn-fundamentos" href="fundamentos.html">fundamentos</a></li>
+                <li><a id="btn-esenciales" href="esenciales.html">esenciales</a></li>
+                <li><a id="btn-semantica" href="semantica.html">semántica</a></li>
+                <li><a id="btn-texto" href="texto.html">texto</a></li>
+                <li><a id="btn-multimedia" href="multimedia.html">multimedia</a></li>
+                <li><a id="btn-datos" class="activo" href="datos.html">datos</a></li>
+                <li><a id="btn-formulario" href="formulario.html">formulario</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="contenido">
+        <article class="sec-presentacion" id="sec-datos">
+            <div class="sec-presentacion-imagen"></div>
+            <div class="sec-presentacion-texto">
+                <h2>datos</h2>
+                <p>Etiquetas para organizar datos e información y presentarla de formas que faciliten su lectura, ya sea a través de listados o información tabular estructurada.</p>
+            </div>
+        </article>
+
+        <article class="ficha">
+			<h3>ol</h3>
+			<div class="ficha-descripcion ficha-bloque">
+				<h4>Descripción</h4>
+				Define una lista ordenada, puede ser por orden numérico o alfabético. Para definir los elementos que componen la lista debe usarse la etiqueta <span class="etiqueta-inline">li</span>. Las listas pueden anidarse y combinarse colocando nuevas listas dentro de etiquetas <span class="etiqueta-inline">li</span>. Se despliega por defecto en bloque.
+			</div>
+			<div class="ficha-atributos ficha-bloque mitad">
+				<h4>Atributos destacados</h4>
+				<ul class="lista-atributos">
+					<li><b>reversed:</b> Define un orden descendente para los elementos de la lista.</li>
+					<li><b>start:</b> Especifica el valor inicial para el orden de la lista.</li>
+				</ul>
+			</div>
+			<div class="ficha-etiquetas ficha-bloque mitad borde-inferior">
+				<h4>Etiquetas secundarias</h4>
+				<ul class="listado-etiquetas">
+					<li><b>li</b>: Define un elemento de lista ordenada o desordenada</li>
+				</ul>
+			</div>
+			<div class="ficha-sintaxis ficha-bloque mitad">
+				<h4>Sintaxis</h4>
+				<pre>
+&lt;ol reversed start="4"&gt;
+    &lt;li&gt;Elemento de lista&lt;/li&gt;
+    &lt;li&gt;Lista ordenada anidada
+        &lt;ol&gt;
+            &lt;li&gt;Lista ordenada anidada&lt;/li&gt;
+            &lt;li&gt;Lista ordenada anidada&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Elemento de lista&lt;/li&gt;
+&lt;/ol&gt;
+				</pre>
+			</div>
+			<div class="ficha-estilos ficha-bloque mitad">
+				<h4>Vista con estilos</h4>
+				<div>
+					<ol reversed start="4">
+						<li>Elemento de lista</li>
+						<li>Lista ordenada anidada
+							<ol>
+								<li>Lista ordenada anidada</li>
+								<li>Lista ordenada anidada</li>
+							</ol>
+						</li>
+						<li>Elemento de lista</li>
+					</ol>
+				</div>
+			</div>
+		</article>
+
+        <article class="ficha">
+			<h3>ul</h3>
+			<div class="ficha-descripcion ficha-bloque">
+				<h4>Descripción</h4>
+				<p>Define una lista desordenada, para establecer los elementos que componen la lista debe usarse la etiqueta li. Las listas pueden anidarse y combinarse colocando nuevas listas dentro de etiquetas li. Se despliega por defecto en bloque.</p>
+			</div>
+			<div class="ficha-etiquetas ficha-bloque mitad borde-inferior">
+				<h4>Etiquetas secundarias</h4>
+				<ul class="listado-etiquetas">
+					<li><b>li</b>: Define un elemento de lista ordenada o desordenada</li>
+				</ul>
+			</div>
+			<div class="ficha-sintaxis ficha-bloque mitad">
+				<h4>Sintaxis</h4>
+				<pre>
+&lt;ul&gt;
+    &lt;li&gt;Elemento de lista&lt;/li&gt;
+    &lt;li&gt;Lista ordenada anidada
+        &lt;ol&gt;
+            &lt;li&gt;Lista ordenada anidada&lt;/li&gt;
+            &lt;li&gt;Lista ordenada anidada&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+				</pre>
+			</div>
+			<div class="ficha-estilos ficha-bloque">
+				<h4>Vista con estilos</h4>
+				<div>
+					<ul>
+						<li>Elemento de lista</li>
+						<li>Lista ordenada anidada
+							<ul>
+								<li>Lista anidada</li>
+								<li>Lista anidada</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</article>
+
+        <article class="ficha">
+			<h3>table</h3>
+			<div class="ficha-descripcion ficha-bloque">
+				<h4>Descripción</h4>
+				<p>Establece la presencia de una tabla. Para definir su estructura se utilizan las etiquetas <span class="etiqueta-inline">tr</span>, <span class="etiqueta-inline">th</span> y <span class="etiqueta-inline">td</span> al interior de table. Se despliega por defecto en bloque. Es importante entender que, por buenas prácticas, su uso debe centrarse exclusivamente en la presentación de datos tabulares y no para maquetación de elementos</p>
+			</div>
+			<div class="ficha-atributos ficha-bloque mitad">
+				<h4>Atributos destacados</h4>
+				Si bien, <span class="etiqueta-inline">table</span> no cuenta con atributos básicos destacados, sus etiquetas secundarias, <span class="etiqueta-inline">th</span> y <span class="etiqueta-inline">td</span> presentan los siguientes:
+				<ul class="lista-atributos">
+					<li><b>colspan:</b> Indica que el número de celdas definidas en el valor del atributo se combinarán horizontalmente. Es importante verificar las celdas combinadas y eliminar las sobrantes para evitar deformaciones en la tabla final.</li>
+					<li><b>rowspan:</b> Indica que el número de celdas definidas en el valor del atributo se combinarán verticalmente. Es importante verificar las celdas combinadas y eliminar las sobrantes para evitar deformaciones en la tabla final.</li>
+				</ul>
+			</div>
+			<div class="ficha-etiquetas ficha-bloque mitad">
+				<h4>Etiquetas secundarias</h4>
+				<ul class="listado-etiquetas">
+					<li><b>tr</b>: Define una fila en la tabla.</li>
+					<li><b>td</b>: Define una celda de datos, debe colocarse siempre dentro de un <span class="etiqueta-inline">tr</span></li>
+					<li><b>th</b>: Define una celda de encabezado, debe colocarse siempre dentro de un <span class="etiqueta-inline">tr</span>, preferentemente en el primero de la tabla.</li>
+				</ul>
+			</div>
+			<div class="ficha-sintaxis ficha-bloque">
+				<h4>Sintaxis</h4>
+				<pre>
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Celda de encabezado 1&lt;/th&gt;
+        &lt;th&gt;Celda de encabezado 2&lt;/th&gt;
+        &lt;th&gt;Celda de encabezado 3&lt;/th&gt;
+        &lt;th&gt;Celda de encabezado 4&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td rowspan="3"&gt;Celda combinada verticalmente (3 celdas)&lt;/td&gt;
+        &lt;td&gt;Celda de datos&lt;/td&gt;
+        &lt;td&gt;Celda de datos&lt;/td&gt;
+        &lt;td&gt;Celda de datos&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Celda de datos&lt;/td&gt;
+        &lt;td colspan="2"&gt;Celda combinada horizontalmente (2 celdas)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Celda de datos&lt;/td&gt;
+        &lt;td&gt;Celda de datos&lt;/td&gt;
+        &lt;td&gt;Celda de datos&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+				</pre>
+			</div>
+			<div class="ficha-estilos ficha-bloque">
+				<h4>Vista con estilos</h4>
+				<div>
+					<table>
+						<tr>
+							<th>Celda de encabezado 1</th>
+							<th>Celda de encabezado 2</th>
+							<th>Celda de encabezado 3</th>
+							<th>Celda de encabezado 4</th>
+						</tr>
+						<tr>
+							<td rowspan="3">Celda combinada verticalmente (3 celdas)</td>
+							<td>Celda de datos</td>
+							<td>Celda de datos</td>
+							<td>Celda de datos</td>
+						</tr>
+						<tr>
+							<td>Celda de datos</td>
+							<td colspan="2">Celda combinada horizontalmente (2 celdas)</td>
+						</tr>
+						<tr>
+							<td>Celda de datos</td>
+							<td>Celda de datos</td>
+							<td>Celda de datos</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</article>
+
+    </section>
+    <footer>
+        <p>Guía básica HTML5 - 2021</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía básica HTML - Formulario</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script> </script>
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="index.html">Guía básica HTML 5</a>
+        </h1>
+        <input type="checkbox" class="m" id="menuBtn">
+        <label for="menuBtn" class="m">Menú</label>
+        <nav>
+            <ul>
+                <li><a id="btn-fundamentos" href="fundamentos.html">fundamentos</a></li>
+                <li><a id="btn-esenciales" href="esenciales.html">esenciales</a></li>
+                <li><a id="btn-semantica" href="semantica.html">semántica</a></li>
+                <li><a id="btn-texto" href="texto.html">texto</a></li>
+                <li><a id="btn-multimedia" href="multimedia.html">multimedia</a></li>
+                <li><a id="btn-datos" href="datos.html">datos</a></li>
+                <li><a id="btn-formulario" class="activo" href="formulario.html">formulario</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="contenido">
+        <article class="sec-presentacion" id="sec-formulario">
+            <div class="sec-presentacion-imagen"></div>
+            <div class="sec-presentacion-texto">
+                <h2>formulario</h2>
+                <p>Etiquetas útiles para definir un formulario, asignarle un título y definir elementos de interacción para la captura de datos e información específica proporcionada por los usuarios.</p>
+            </div>
+        </article>
+
+        <article class="ficha">
+			<h3>form</h3>
+			<div class="ficha-descripcion ficha-bloque">
+				<h4>Descripción</h4>
+				Define la presencia de un formulario en la página.
+			</div>
+			<div class="ficha-atributos ficha-bloque mitad">
+				<h4>Atributos destacados</h4>
+				<ul class="lista-atributos">
+					<li><b>action:</b> Especifíca donde será enviada la información recolectada por los campos del formulario.</li>
+                    <li><b>method:</b> Define el método HTTP usado para el envío de los datos.</li>
+                    <li><b>name:</b> Define un nombre para el formulario.</li>
+				</ul>
+                Cabe destacar que estos atributos cobran mayor sentido en procesos de desarrollo del lado del servidor (back-end) ya que HTML no los utiliza de forma directa. Sin embargo, es importante mencionarlos ya que son fundamentales para la funcionalidad del formulario, por lo tanto, es valioso saber de su existencia.
+			</div>
+			<div class="ficha-sintaxis ficha-bloque mitad">
+				<h4>Sintaxis</h4>
+				<pre>
+&lt;form action=" method=" name=" &gt;
+    &lt;!-- Contenido del formulario --&gt;
+&lt;/form&gt;
+				</pre>
+			</div>
+		</article>
+
+        <article class="ficha">
+			<h3>fieldset</h3>
+			<div class="ficha-descripcion ficha-bloque">
+				<h4>Descripción</h4>
+				Agrupa todas las etiquetas relacionadas con un <span class="etiqueta-inline">form</span> en un conjunto de controles. Por defecto, dibuja una caja que encierra los elementos del formulario.
+			</div>
+			<div class="ficha-sintaxis ficha-bloque mitad">
+				<h4>Sintaxis</h4>
+				<pre>
+&lt;form&gt;
+    &lt;fieldset&gt;
+    &lt;!-- Elementos del formulario. --&gt;
+    &lt;/fieldset&gt;
+&lt;/form&gt;
+				</pre>
+			</div>
+			<div class="ficha-estilos ficha-bloque mitad">
+				<h4>Vista con estilos</h4>
+				<div>
+					<form>
+                        <fieldset>
+                        <!-- Elementos del formulario. -->
+                        </fieldset>
+                    </form>
+				</div>
+			</div>
+		</article>
+
+        <article class="ficha">
+			<h3>legend</h3>
+			<div class="ficha-descripcion ficha-bloque">
+				<h4>Descripción</h4>
+				Define una leyenda o título para un <span class="etiqueta-inline">fieldset</span>.
+			</div>
+			<div class="ficha-sintaxis ficha-bloque mitad">
+				<h4>Sintaxis</h4>
+				<pre>
+&lt;form&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Mi Formulario&lt;/legend&gt;
+        Elementos del formulario
+    &lt;/fieldset&gt;
+&lt;/form&gt;
+				</pre>
+			</div>
+			<div class="ficha-estilos ficha-bloque mitad">
+				<h4>Vista con estilos</h4>
+				<div>
+					<form>
+                        <fieldset>
+                            <legend>Mi Formulario</legend>
+                            Elementos del formulario
+                        </fieldset>
+                    </form>
+				</div>
+			</div>
+		</article>
+
+        <article class="ficha">
+			<h3>label</h3>
+			<div class="ficha-descripcion ficha-bloque">
+				<h4>Descripción</h4>
+				Funciona como una etiqueta o rótulo para los elementos del formulario como <span class="etiqueta-inline">input</span>, <span class="etiqueta-inline">textarea</span> o <span class="etiqueta-inline">select</span>, si bien no tiene un estilo visual definido, su uso está más enfocado en aspectos de usabilidad, ya que puede enlazarse a elementos del formulario para activarlos o interactuar con ellos de forma sencilla y proporciona algunas opciones para aplicar estilos específicos a elementos que, por defecto, no admiten estilos CSS.
+			</div>
+			<div class="ficha-atributos ficha-bloque mitad borde-inferior">
+				<h4>Atributos destacados</h4>
+				<ul class="lista-atributos">
+					<li><b>for:</b> Especifica el ID del elemento con el cual interactúa el <span class="etiqueta-inline">label</span>.</li>
+				</ul>
+			</div>
+			<div class="ficha-sintaxis ficha-bloque mitad">
+				<h4>Sintaxis</h4>
+				<pre>
+&lt;label for="nombre"&gt;Nombre: &lt;/label&gt;
+&lt;input type="text" id="nombre"&gt;
+				</pre>
+			</div>
+            <div class="ficha-estilos ficha-bloque">
+				<h4>Vista con estilos</h4>
+				<div>
+					<label for="nombre">Nombre: </label>
+                    <input type="text" id="nombre">
+				</div>
+			</div>
+		</article>
+
+        <article class="ficha">
+			<h3>input</h3>
+			<div class="ficha-descripcion ficha-bloque">
+				<h4>Descripción</h4>
+				Define un campo de captura de datos, sus características se definen en función de su tipo, el cual se establece mediante el atributo type=". Aunque en sí misma es una etiqueta relativamente simple, su complejidad y versatilidad radica en los diferentes tipos de input, cada uno con sus características y consideraciones particulares.
+			</div>
+			<div class="ficha-atributos ficha-bloque">
+				<h4>Atributos destacados</h4>
+				<ul class="lista-atributos">
+					<li><b>type:</b> Define el tipo de campo para captura de datos, algunos de estos tipos de inputs tienen atributos particulares dependiendo de su función. Los tipos más comunes son:
+                        <ul>
+                            <li><b>text:</b> Campo de tipo texto para introducción de datos alfanuméricos.</li>
+                            <li><b>number:</b> Campo para introducción de datos numéricos.</li>
+                            <li><b>password:</b> Similar a un campo de tipo texto, con la diferencia de que éste oculta los caracteres para mantener una vista segura.</li>
+                            <li><b>checkbox:</b> Define una casilla de verificación y permite selección múltiple.</li>
+                            <li><b>radio:</b> Define un campo de selección única con opciones auto descartables. Para establecer un grupo de opciones de radio, todos los inputs del grupo de opciones deberán tener el mismo atributo name=""".</li>
+                            <li><b>file:</b> Presenta la opción para carga de archivos externos.</li>
+                            <li><b>hidden:</b> Campo oculto en el cuál se pueden definir valores predefinidos.</li>
+                            <li><b>submit:</b> Define un botón para el envío del formulario. El atributo value=""" establece el texto de dicho botón.</li>
+                        </ul>
+                    </li>
+                    <li><b>autofocus:</b> Especifica que el <span class="etiqueta-inline">input</span> con la propiedad tendrá el foco de forma automática una vez que se cargue la página.</li>
+                    <li><b>checked:</b> Establece el estado del <span class="etiqueta-inline">input</span> (checkbox y radio) como verificado (checado).</li>
+                    <li><b>disabled:</b> Presenta el <span class="etiqueta-inline">input</span> como deshabilitado y no se puede interactuar con él.</li>
+                    <li><b>max:</b> Especifica el valor máximo de <span class="etiqueta-inline">input</span> (numérico).</li>
+                    <li><b>min:</b> Especifica el valor mínimo de <span class="etiqueta-inline">input</span> (numérico).</li>
+                    <li><b>maxlength:</b> Define la cantidad máxima de caracteres permitidos en el <span class="etiqueta-inline">input</span>.</b>
+                    <li><b>minlength:</b> Define la cantidad mínima de caracteres permitidos en el <span class="etiqueta-inline">input</span>.</li>
+                    <li><b>name:</b> Define un nombre para el campo.</li>
+                    <li><b>placeholder:</b> Muestra un texto de ayuda dentro del campo para dar al usuario sugerencias o pistas sobre lo que debe ingresar en él.</li>
+                    <li><b>pattern:</b> Especifica alguna expresión regular para validación y llenado del campo.</li>
+                    <li><b>required:</b> Especifica que el <span class="etiqueta-inline">input</span> es obligatorio (requerido) y debe ser llenado para proceder al envío del formulario.</li>
+                    <li><b>value:</b> Establece un valor (contenido) del <span class="etiqueta-inline">input</span>.</li>
+				</ul>
+			</div>
+			<div class="ficha-sintaxis ficha-bloque">
+				<h4>Sintaxis</h4>
+				<pre>
+&lt;form&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Mi Formulario&lt;/legend&gt;
+        
+        &lt;label&gt;Campo de texto: &lt;/label&gt;
+        &lt;input type="text"&gt;
+
+        &lt;label&gt;Campo de numérico: &lt;/label&gt;
+        &lt;input type="number" pattern="[0-9]" placeholder="Este campo solo acepta números"&gt;
+
+        &lt;label&gt;Campo de password: &lt;/label&gt;
+        &lt;input required placeholder="Mínimo 8 caracteres"" minlength="8" type="password"&gt;
+
+        &lt;label&gt;Campo deshabilitado: &lt;/label&gt;
+        &lt;input disabled value="No es posible interactuar con este campo" type="text"&gt;
+
+        &lt;h5&gt;Checkbox&lt;/h5&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;input id="check1" type="checkbox"&gt;
+                &lt;label for="check1"&gt;Opción 1&lt;/label&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input checked id="check2" type="checkbox"&gt;
+                &lt;label for="check2"&gt;Opción 2&lt;/label&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input id="check3" type="checkbox"&gt;
+                &lt;label for="check3"&gt;Opción 3&lt;/label&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;h5&gt;Radio&lt;/h5&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;input id="radioA" name="radioOption" type="radio"&gt;
+                &lt;label for="radioA"&gt;Opción A&lt;/label&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input id="radioB" name="radioOption" type="radio"&gt;
+                &lt;label for="radioB"&gt;Opción B&lt;/label&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input id="radioC" name="radioOption" type="radio"&gt;
+                &lt;label for="radioC"&gt;Opción C&lt;/label&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;h5&gt;Archivo&lt;/h5&gt;
+        &lt;label for="fileInput"&gt;Adjuntar archivo&lt;/label&gt;
+        &lt;input id="fileInput" type="file"&gt;
+
+        &lt;input type="hidden" value="Campo de prueba oculto"&gt;
+
+        &lt;input type="submit" value="Enviar formulario"&gt;
+    &lt;/fieldset&gt;
+&lt;/form&gt;
+				</pre>
+			</div>
+            <div class="ficha-estilos ficha-bloque">
+				<h4>Vista con estilos</h4>
+				<div>
+					<form>
+                        <fieldset>
+                            <legend>Mi Formulario</legend>
+                            
+                            <label>Campo de texto: </label>
+                            <input class="campo" type="text">
+                    
+                            <label>Campo de numérico: </label>
+                            <input class="campo" type="number" pattern="[0-9]" placeholder="Este campo solo acepta números">
+                    
+                            <label>Campo de password: </label>
+                            <input class="campo" required placeholder="Mínimo 8 caracteres" minlength="8" type="password">
+                    
+                            <label>Campo deshabilitado: </label>
+                            <input class="campo" disabled value="No es posible interactuar con este campo" type="text">
+                    
+                            <h5>Checkbox</h5>
+                            <ul>
+                                <li>
+                                    <input id="check1" type="checkbox">
+                                    <label for="check1">
+                                        <span></span>
+                                        Opción 1
+                                    </label>
+                                </li>
+                                <li>
+                                    <input checked id="check2" type="checkbox">
+                                    <label for="check2">
+                                        <span></span>
+                                        Opción 2
+                                    </label>
+                                </li>
+                                <li>
+                                    <input id="check3" type="checkbox">
+                                    <label for="check3">
+                                        <span></span>
+                                        Opción 3
+                                    </label>
+                                </li>
+                            </ul>
+                    
+                            <h5>Radio</h5>
+                            <ul>
+                                <li>
+                                    <input id="radioA" name="radioOption" type="radio">
+                                    <label for="radioA">Opción A</label>
+                                </li>
+                                <li>
+                                    <input id="radioB" name="radioOption" type="radio">
+                                    <label for="radioB">Opción B</label>
+                                </li>
+                                <li>
+                                    <input id="radioC" name="radioOption" type="radio">
+                                    <label for="radioC">Opción C</label>
+                                </li>
+                            </ul>
+                    
+                            <h5>Archivo</h5>
+                            <label for="fileInput">Adjuntar archivo</label>
+                            <input id="fileInput" type="file">
+                    
+                            <input type="hidden" value="Campo de prueba oculto">
+                    
+                            <input type="submit" value="Enviar formulario">
+                        </fieldset>
+                    </form>
+				</div>
+			</div>
+		</article>
+
+        <article class="ficha">
+			<h3>textarea</h3>
+			<div class="ficha-descripcion ficha-bloque">
+				<h4>Descripción</h4>
+				Define un campo de texto multilínea para ingresar bloques de texto de mayor tamaño que en un <span class="etiqueta-inline">input</span>.
+			</div>
+			<div class="ficha-atributos ficha-bloque mitad borde-inferior">
+				<h4>Atributos destacados</h4>
+				<ul class="lista-atributos">
+					<li><b>autofocus:</b> Especifica que el <span class="etiqueta-inline">textarea</span> con la propiedad tendrá el foco de forma automática una vez que se cargue la página.</li>
+                    <li><b>disabled:</b> Presenta el <span class="etiqueta-inline">textarea</span> como deshabilitado y no se puede interactuar con él.</li>
+                    <li><b>maxlength:</b> Define la cantidad máxima de caracteres permitidos en el <span class="etiqueta-inline">textarea</span>.</b>
+                    <li><b>minlength:</b> Define la cantidad mínima de caracteres permitidos en el <span class="etiqueta-inline">textarea</span>.</li>
+                    <li><b>name:</b> Define un nombre para el campo.</li>
+                    <li><b>placeholder:</b> Muestra un texto de ayuda dentro del campo para dar al usuario sugerencias o pistas sobre lo que debe ingresar en él.</li>
+                    <li><b>required:</b> Especifica que el <span class="etiqueta-inline">textarea</span> es obligatorio (requerido) y debe ser llenado para proceder al envío del formulario.</li>
+				</ul>
+			</div>
+			<div class="ficha-sintaxis ficha-bloque mitad">
+				<h4>Sintaxis</h4>
+				<pre>
+&lt;textarea placeholder="Escribe un bloque de texto aquí" required&gt;&lt;/textarea&gt;
+				</pre>
+			</div>
+            <div class="ficha-estilos ficha-bloque">
+				<h4>Vista con estilos</h4>
+				<div>
+					<textarea placeholder="Escribe un bloque de texto aquí" required></textarea>
+				</div>
+			</div>
+		</article>
+
+        <article class="ficha">
+			<h3>select</h3>
+			<div class="ficha-descripcion ficha-bloque">
+				<h4>Descripción</h4>
+				Crea una lista desplegable de opciones. Las opciones disponibles de la lista se definen usando etiquetas <span class="etiqueta-inline">option</span>
+			</div>
+			<div class="ficha-atributos ficha-bloque mitad borde-inferior">
+				<h4>Atributos destacados</h4>
+				<ul class="lista-atributos">
+					<li><b>multiple:</b> Habilita la selección de varias opciones de la lista</li>
+				</ul>
+			</div>
+			<div class="ficha-sintaxis ficha-bloque mitad">
+				<h4>Sintaxis</h4>
+				<pre>
+&lt;select&gt;
+    &lt;option value="opcion1"&gt;Opción 1&lt;/option&gt;
+    &lt;option value="opcion2"&gt;Opción 2&lt;/option&gt;
+    &lt;option value="opcion3"&gt;Opción 3&lt;/option&gt;
+    &lt;option value="opcion4"&gt;Opción 4&lt;/option&gt;
+&lt;/select&gt;
+				</pre>
+			</div>
+            <div class="ficha-estilos ficha-bloque">
+				<h4>Vista con estilos</h4>
+				<div>
+					<select>
+                        <option value="opcion1">Opción 1</option>
+                        <option value="opcion2">Opción 2</option>
+                        <option value="opcion3">Opción 3</option>
+                        <option value="opcion4">Opción 4</option>
+                    </select>
+				</div>
+			</div>
+		</article>
+    </section>
+    <footer>
+        <p>Guía básica HTML5 - 2021</p>
+    </footer>
+</body>
+</html>

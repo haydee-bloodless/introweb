@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía básica HTML - Semántica</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script> </script>
+</head>
+<body>
+   <header>
+       <h1>
+        <a href="index.html">Guía Básica HTML 5</a>   
+        </h1>
+       <!-- Este es un cometario -->
+       <nav>
+           <ul>
+               <li><a id="btn-fundamentos" href="fundamentos.html">Fundamentos</a></li>
+               <li><a id="btn-esenciales" href="esenciales.html">Esenciales</a></li>
+               <li><a id="btn-semantica" class="activo" href="semantica.html">Semántica</a></li>
+               <li><a id="btn-texto" href="texto.html">Texto</a></li>
+               <li><a id="btn-multimedia" href="multimedia.html">Multimedia</a></li>
+               <li><a id="btn-datos" href="datos.html">Datos</a></li>
+               <li><a id="btn-formulario" href="formulario.html">Formulario</a></li>
+           </ul>
+
+       </nav>
+
+   </header>
+   <section id="contenido">
+       <article class="sec-presentacion" id="sec-semantica">
+           <div class="sec-presentacion-imagen"></div>
+           <div class="sec-presentacion-texto">
+               <h2>Sémantica</h2>
+               <p>Etiquetas que establecen las características básicas de la página, definen los
+                apartados de información y la estructura de los contenidos dando sentido a los mismos.</p>
+           </div>
+       </article>
+
+       <article class="ficha">
+           <h3>header</h3>
+           <div class="ficha-descripcion ficha-bloque">
+               <h4>Descripción</h4>
+               Etiqueta introducida en HTML5. Define el encabezado de la página. Normalmente contiene elementos de identidad del Sitio
+Web, título principal y frecuentemente el menú principal. No son elementos únicos, pueden existir varios.
+            </div>
+            <div class="ficha-sintaxis ficha-bloque">
+                <h4>Sintaxis</h4>
+                <pre>
+&lt;header&gt;
+  &lt;!-- Logo/icono/Título principal/menú de navegación --&gt;
+&lt;/header&gt;
+                </pre>
+            </div>
+       </article>
+
+       <article class="ficha">
+        <h3>nav</h3>
+        <div class="ficha-descripcion ficha-bloque">
+            <h4>Descripción</h4>
+            Etiqueta introducida en HTML5. Define un conjunto de enlaces para navegar en los
+contenidos del Sitio o la página. Pueden existir varias etiquetas nav dentro de una
+misma página, en función de la estructura de contenidos y las necesidades de navegación del Sitio.
+         </div>
+         <div class="ficha-sintaxis ficha-bloque">
+             <h4>Sintaxis</h4>
+             <pre>
+&lt;nav&gt;
+  &lt;!-- Enlaces de navegación del Sitio Web --&gt;
+&lt;/nav&gt;
+             </pre>
+         </div>
+    </article>
+
+    <article class="ficha">
+        <h3>section</h3>
+        <div class="ficha-descripcion ficha-bloque">
+            <h4>Descripción</h4>
+            Etiqueta introducida en HTML5. Define secciones que agrupan grandes bloques de información y contenido.
+         </div>
+         <div class="ficha-sintaxis ficha-bloque">
+             <h4>Sintaxis</h4>
+             <pre>
+&lt;section&gt;
+  &lt;!-- Gran bloque de contenido --&gt;
+&lt;/section&gt;
+             </pre>
+         </div>
+    </article>
+
+    <article class="ficha">
+        <h3>article</h3>
+        <div class="ficha-descripcion ficha-bloque">
+            <h4>Descripción</h4>
+            Etiqueta introducida en HTML5. Define bloques de contenido individual o especifico. Por ejemplo, entradas (posts),
+sub-temas de un capítulo, notas de una sección de noticias, etc.
+         </div>
+         <div class="ficha-sintaxis ficha-bloque">
+             <h4>Sintaxis</h4>
+             <pre>
+&lt;article&gt;
+  &lt;!-- Entrada de un blog / apartado de una sección / etc. --&gt;
+&lt;/article&gt;
+             </pre>
+         </div>
+    </article>
+
+    <article class="ficha">
+        <h3>footer</h3>
+        <div class="ficha-descripcion ficha-bloque">
+            <h4>Descripción</h4>
+            Etiqueta introducida en HTML5. Define el área de pie de página. Suele contener datos de contacto, copyright, enlaces de
+referencia externos, menús de navegación secundarios, entre otros.
+         </div>
+         <div class="ficha-sintaxis ficha-bloque">
+             <h4>Sintaxis</h4>
+             <pre>
+&lt;footer&gt;
+  &lt;!-- Datos de pie de página --&gt;
+&lt;/footer&gt;
+             </pre>
+         </div>
+    </article>
+
+    <article class="ficha">
+        <h3>div</h3>
+        <div class="ficha-descripcion ficha-bloque">
+            <h4>Descripción</h4>
+           Define un contenedor genérico. Podría decirse que es el contenedor de bloque más elemental. Se recomienda para
+organizar el contenido al interior de etiquetas de mayor peso semántico como section o article y lograr así mayor control
+de la estructura de la página mediante CSS.
+         </div>
+         <div class="ficha-sintaxis ficha-bloque">
+             <h4>Sintaxis</h4>
+             <pre>
+&lt;div&gt;
+  &lt;!-- Fracción de un bloque de contenido --&gt;
+&lt;/div&gt;
+             </pre>
+         </div>
+    </article>
+    
+    <article class="ficha">
+        <h3>span</h3>
+        <div class="ficha-descripcion ficha-bloque">
+            <h4>Descripción</h4>
+           Similar a div, esta etiqueta podría considerarse como el contenedor in-line más elemental. Se emplea para agrupar
+otros elementos en línea o definir bloques específicos dentro de ellos, por ejemplo, etiquetar un fragmento de texto dentro de
+un párrafo. Facilita la implementación precisa de estilos a elementos in-line puntuales mediante CSS.
+         </div>
+         <div class="ficha-sintaxis ficha-bloque">
+             <h4>Sintaxis</h4>
+             <pre>
+&lt;span&gt;
+  &lt;!-- Fragmento de texto o grupo de elementos in-line --&gt;
+&lt;/span&gt;
+             </pre>
+         </div>
+    </article>
+
+   </section>
+   <footer>
+       <p>Guía Básica HTML5 - 2021</p>
+   </footer>
+</body>
+</html>

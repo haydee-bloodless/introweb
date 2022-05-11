@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía básica HTML - Multimedia</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script> </script>
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="index.html">Guía básica HTML 5</a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a id="btn-fundamentos" href="fundamentos.html">fundamentos</a></li>
+                <li><a id="btn-esenciales" href="esenciales.html">esenciales</a></li>
+                <li><a id="btn-semantica" href="semantica.html">semántica</a></li>
+                <li><a id="btn-texto" href="texto.html">texto</a></li>
+                <li><a id="btn-multimedia" class="activo" href="multimedia.html">multimedia</a></li>
+                <li><a id="btn-datos" href="datos.html">datos</a></li>
+                <li><a id="btn-formulario" href="formulario.html">formulario</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="contenido">
+        <article class="sec-presentacion" id="sec-multimedia">
+            <div class="sec-presentacion-imagen"></div>
+            <div class="sec-presentacion-texto">
+                <h2>multimedia</h2>
+                <p>Estas etiquetas permiten enlazar elementos multimedia dentro de la página para proporcionar contenidos más atractivos y enriquecidos a los usuarios.</p>
+            </div>
+        </article>
+
+        <article class="ficha">
+            <h3>img</h3>
+            <div class="ficha-descripcion ficha-bloque">
+                <h4>Descripción</h4>
+				Enlaza una imagen a la página y la muestra insertada en el documento.
+            </div>
+            <div class="ficha-atributos ficha-bloque mitad borde-inferior">
+                <h4>Atributos destacados</h4>
+                <ul class="lista-atributos">
+                    <li><b>alt:</b> Define un texto alternativo en caso de que la imagen no se cargue. Adicionalmente, proporciona información de soporte para accesibilidad.</li>
+					<li><b>src:</b> Especifica la URL del origen de la imagen.</li>
+                </ul>
+            </div>
+            <div class="ficha-sintaxis ficha-bloque mitad">
+                <h4>Sintaxis</h4>
+                <pre>
+&lt;img src="mi_imagen.jpg" alt="Mi imagen"&gt;
+                </pre>
+            </div>
+            <div class="ficha-estilos ficha-bloque">
+                <h4>Vista con estilos</h4>
+                <div>
+                </div><img src="img/mi_imagen.png" alt="Mi imagen">
+            </div>
+        </article>
+
+        <article class="ficha">
+            <h3>iframe</h3>
+            <div class="ficha-descripcion ficha-bloque">
+                <h4>Descripción</h4>
+				Establece un contenedor para un recurso externo embebido en la página. Por ejemplo, mapas, videos e incluso otros documentos HTML.
+            </div>
+            <div class="ficha-atributos ficha-bloque mitad borde-inferior">
+                <h4>Atributos destacados</h4>
+                <ul class="lista-atributos">
+                    <li><b>src:</b> Especifica la URL del origen del recurso. Adicionalmente, los iframe pueden tener diversos atributos predefinidos por el proveedor del recurso.</li>
+                </ul>
+            </div>
+            <div class="ficha-sintaxis ficha-bloque mitad">
+                <h4>Sintaxis</h4>
+                <pre>
+&lt;iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.7603746299465!2d25.364975015932796!3d45.51490217910161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b347e5a415de31%3A0xcf922792d921ab7f!2sCastillo%20de%20Bran!5e0!3m2!1ses-419!2smx!4v1590962710017!5m2!1ses-419!2smx" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"&gt;&lt;/iframe&gt;
+                </pre>
+            </div>
+            <div class="ficha-estilos ficha-bloque">
+                <h4>Vista con estilos</h4>
+                <div>
+                </div> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.7603746299465!2d25.364975015932796!3d45.51490217910161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b347e5a415de31%3A0xcf922792d921ab7f!2sCastillo%20de%20Bran!5e0!3m2!1ses-419!2smx!4v1590962710017!5m2!1ses-419!2smx" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </article>
+
+        <article class="ficha">
+            <h3>video</h3>
+            <div class="ficha-descripcion ficha-bloque">
+                <h4>Descripción</h4>
+				Enlaza un video a la página y lo muestra insertado en el documento.
+            </div>
+            <div class="ficha-atributos ficha-bloque mitad borde-inferior">
+                <h4>Atributos destacados</h4>
+                <ul class="lista-atributos">
+                    <li><b>autoplay:</b> Define si el video debe reproducirse de forma automática en cuanto cargue la página. Algunos navegadores no habilitan este atributo si no se define junto con el atributo muted o controls, con la finalidad de evitar una mala experiencia de usuario.</li>
+                    <li><b>controls:</b> Muestra los controles de reproducción del video.</li>
+                    <li><b>loop:</b> Especifica si el video se reproducirá de nuevo cada vez que finalice su reproducción.</li>
+                    <li><b>muted:</b> Especifica si el audio del video estará habilitado o silenciado.</li>
+                    <li><b>poster:</b> Define una imagen estática que se presentará mientras el video carga o se activa el botón de reproducción.</li>
+                    <li><b>src:</b> Especifica la URL del origen del video. Cuando un video tiene más de un formato de archivo disponible para garantizar su reproducción (mp4 y ogg, por ejemplo) este atributo no se define dentre de video, en su lugar, deberá añadirse una etiqueta source con los atributos src y type por cada tipo de archivo disponible.</li>
+                </ul>
+            </div>
+            <div class="ficha-sintaxis ficha-bloque mitad">
+                <h4>Sintaxis</h4>
+                <pre>
+&lt;!-- Video con un solo origen --&gt;
+&lt;video src="mi_video.mp4" autoplay muted controls&gt;&lt;/video&gt;
+
+&lt;!-- Video con un múltiples orígenes --&gt;
+&lt;video poster="mi_imagen_poster.jpg" controls loop&gt;
+    &lt;source src="mi_video.mp4" type="video/mp4"&gt;
+    &lt;source src="mi_video.ogg" type="video/ogg"&gt;
+    Tu navegador no soporta videos.
+&lt;/video&gt;
+                </pre>
+            </div>
+            <div class="ficha-estilos ficha-bloque">
+                <h4>Vista con estilos</h4>
+                <div>
+                </div><!-- Video con un solo origen -->
+                <video src="media/mi_video.mp4" autoplay muted controls></video>
+                
+                <!-- Video con un múltiples orígenes -->
+                <video poster="img/poster_video.jpg" controls loop>
+                    <source src="media/mi_video.mp4" type="video/mp4">
+                    <source src="media/mi_video.ogg" type="video/ogg">
+                    Tu navegador no soporta videos.
+                </video>
+            </div>
+        </article>
+
+        <article class="ficha">
+            <h3>audio</h3>
+            <div class="ficha-descripcion ficha-bloque">
+                <h4>Descripción</h4>
+				Enlaza un elemento sonoro a la página y lo muestra insertado en el documento.
+            </div>
+            <div class="ficha-atributos ficha-bloque mitad borde-inferior">
+                <h4>Atributos destacados</h4>
+                <ul class="lista-atributos">
+                    <li><b>autoplay:</b> Define si el audio debe reproducirse de forma automática en cuanto cargue la página. Algunos navegadores no habilitan este atributo si no se define junto con el atributo muted o controls, con la finalidad de evitar una mala experiencia de usuario.</li>
+                    <li><b>controls:</b> Muestra los controles de reproducción del audio.</li>
+                    <li><b>loop:</b> Especifica si el audio se reproducirá de nuevo cada vez que finalice su reproducción.</li>
+                    <li><b>src:</b> Especifica la URL del origen del audio. Cuando un audio tiene más de un formato de archivo disponible para garantizar su reproducción (mp4 y ogg, por ejemplo) este atributo no se define dentre de audio, en su lugar, deberá añadirse una etiqueta source con los atributos src y type por cada tipo de archivo disponible.</li>
+                </ul>
+            </div>
+            <div class="ficha-sintaxis ficha-bloque mitad">
+                <h4>Sintaxis</h4>
+                <pre>
+&lt;!-- Audio con un solo origen --&gt;
+&lt;audio src="mi_audio.mp3" controls&gt;&lt;/audio&gt;
+
+&lt;!-- Audio con un múltiples orígenes --&gt;
+&lt;audio controls&gt;
+    &lt;source src="mi_audio.mp3" type="audio/mp4"&gt;
+    &lt;source src="mi_audio.ogg" type="audio/ogg"&gt;
+    Tu navegador no soporta audios.
+&lt;/audio&gt;
+                </pre>
+            </div>
+            <div class="ficha-estilos ficha-bloque">
+                <h4>Vista con estilos</h4>
+                <div>
+                </div><!-- Audio con un solo origen -->
+                <audio src="media/mi_audio.mp3" controls></audio>
+                
+                <!-- Audio con un múltiples orígenes -->
+                <audio controls>
+                    <source src="media/mi_audio.mp3" type="audio/mp4">
+                    <source src="media/mi_audio.ogg" type="audio/ogg">
+                    Tu navegador no soporta audios.
+                </audio>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <p>Guía básica HTML5 - 2021</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía básica HTML - Texto</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script> </script>
+</head>
+<body>
+   <header>
+       <h1>
+        <a href="index.html">Guía Básica HTML 5</a>   
+        </h1>
+       <!-- Este es un cometario -->
+       <nav>
+           <ul>
+               <li><a id="btn-fundamentos" href="fundamentos.html">Fundamentos</a></li>
+               <li><a id="btn-esenciales" href="esenciales.html">Esenciales</a></li>
+               <li><a id="btn-semantica" href="semantica.html">Semántica</a></li>
+               <li><a id="btn-texto" class="activo" href="texto.html">Texto</a></li>
+               <li><a id="btn-multimedia" href="multimedia.html">Multimedia</a></li>
+               <li><a id="btn-datos" href="datos.html">Datos</a></li>
+               <li><a id="btn-formulario" href="formulario.html">Formulario</a></li>
+           </ul>
+
+       </nav>
+
+   </header>
+   <section id="contenido">
+       <article class="sec-presentacion" id="sec-texto">
+           <div class="sec-presentacion-imagen"></div>
+           <div class="sec-presentacion-texto">
+               <h2>Texto</h2>
+               <p>Etiquetas básicas para dar formato y presentar información textual, ofrecer alternativas
+                de accesibilidad de lectura y proveer esquemas de navegación para los contenidos del
+                sitio o página Web.</p>
+           </div>
+       </article>
+
+       <article class="ficha">
+           <h3>h#</h3>
+           <div class="ficha-descripcion ficha-bloque">
+               <h4>Descripción</h4>
+               Se utiliza para definir encabezados de texto. El número indica la jerarquía, siendo
+h1 el título principal. Se despliega por defecto en bloque. Se recomienda que
+sólo exista un título principal por página como una buena práctica de SEO.
+            </div>
+            <div class="ficha-sintaxis ficha-bloque mitad">
+                <h4>Sintaxis</h4>
+                <pre>
+&lt;h1&gt;Título principal&lt;/h1&gt;
+&lt;h2&gt;Encabezado 2&lt;/h2&gt;
+&lt;h3&gt;Encabezado 3&lt;/h3&gt;
+&lt;h4&gt;Encabezado 4&lt;/h4&gt;
+&lt;h5&gt;Encabezado 5&lt;/h5&gt;
+&lt;h6&gt;Encabezado 6&lt;/h6&gt;
+                </pre>
+            </div>
+            <div class="ficha-estilos ficha-bloque mitad">
+                <h4>Vista con Estilos</h4>
+                <div>
+                    <h1>Título principal</h1>
+                    <h2>Encabezado 2</h2>
+                    <h3>Encabezado 3</h3>
+                    <h4>Encabezado 4</h4>
+                    <h5>Encabezado 5</h5>
+                    <h6>Encabezado 6</h6>
+                </div>
+            </div>
+       </article>
+
+       <article class="ficha">
+        <h3>p</h3>
+        <div class="ficha-descripcion ficha-bloque">
+            <h4>Descripción</h4>
+            Establece un párrafo de texto. Se despliega por defecto en bloque.
+         </div>
+         <div class="ficha-sintaxis ficha-bloque mitad">
+             <h4>Sintaxis</h4>
+             <pre>
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur
+adipiscing elit. Vivamus sed malesuada mi, ac
+habitant morbi tristique senectus et netus
+etmalesuada fames ac turpis egestas.&lt;/p&gt;
+             </pre>
+         </div>
+         <div class="ficha-estilos ficha-bloque mitad">
+             <h4>Vista con Estilos</h4>
+             <div>
+                <p>Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Vivamus sed malesuada mi, ac
+                    habitant morbi tristique senectus et netus
+                    etmalesuada fames ac turpis egestas.</p>
+             </div>
+         </div>
+    </article>
+       
+    <article class="ficha">
+        <h3>a</h3>
+        <div class="ficha-descripcion ficha-bloque">
+            <h4>Descripción</h4>
+            Define un hipervínculo o enlace a algún destino específico, ya sea en la misma
+página, mismo sitio o bien un destino externo. Se despliega por defecto en línea.
+         </div>
+         <div class="ficha-atributos ficha-bloque mitad borde-inferior">
+             <h4>Atributos destacados</h4>
+             <ul class="lista-atributos">
+                <li> <b>download</b>: Si es un enlace de descarga,
+                define el nombre del archivo que se
+                descargará a través del enlace sin
+                recargar el contenido de la página.</li>
+                <li><b>href</b>: Establece el destino al que envía el
+                enlace. En caso de ser una URL, debe
+                llevar siempre el protocolo de
+                transferencia (http o https).</li>
+                <li><b>target</b>: Define donde se abrirá el destino
+                del enlace. Por defecto es "_self", que
+                abre en la misma ventana o pestaña, para
+                abrir en otra pestaña se define "_blank".</li>
+             </ul>
+
+         </div>
+         <div class="ficha-sintaxis ficha-bloque mitad">
+             <h4>Sintaxis</h4>
+             <pre>
+&lt;a href="https://www.sitioexterno.com" target=" _blank"&gt;Enlace externo: envía a una URL fuera del sitio&lt;/a&gt;
+&lt;a href="otraPagina.html"&gt;Enlace local: envía a otra página del sitio&lt;/a&gt;
+&lt;a href="#idDestino"&gt;Enlace interno: envía a un ID en la misma página&lt;/a&gt;
+&lt;a href="archivo.zip" download="Nombre del ZIP"
+&gt;Enlace de descarga&lt;/a&gt;
+             </pre>
+         </div>
+         <div class="ficha-estilos ficha-bloque">
+             <h4>Vista con Estilos</h4>
+             <div>
+                <a class="enlace-1" href="https://www.sitioexterno.com" target=" _blank">Enlace externo: envía a una URL fuera del sitio</a>
+                <a class="enlace-2" href="otraPagina.html">Enlace local: envía a otra página del sitio</a>
+                <a class="enlace-3" href="#idDestino">Enlace interno: envía a un ID en la misma página</a>
+                <a class="enlace-4" title="Soy el enlace 4 colocando title" href="archivo.zip" download="Nombre del ZIP" >Enlace de descarga</a>
+             </div>
+         </div>
+    </article>
+
+    <article class="ficha">
+        <h3>pre</h3>
+        <div class="ficha-descripcion ficha-bloque">
+            <h4>Descripción</h4>
+            Define contenido con texto pre-formateado que conservará su formato de origen.
+         </div>
+         <div class="ficha-sintaxis ficha-bloque mitad">
+             <h4>Sintaxis</h4>
+             <pre>
+&lt;pre&gt;
+Este texto respeta los espacios , saltos
+de línea y formato general tal como se definan
+dentro de esta etiqueta
+&lt;/pre&gt;
+             </pre>
+         </div>
+         <div class="ficha-estilos ficha-bloque mitad">
+             <h4>Vista con Estilos</h4>
+             <div>
+                <pre>
+    Este texto respeta los espacios , saltos
+    de línea y formato general tal como se definan
+    dentro de esta etiqueta
+                    </pre>
+             </div>
+         </div>
+    </article>
+
+    <article class="ficha">
+        <h3>em</h3>
+        <div class="ficha-descripcion ficha-bloque">
+            <h4>Descripción</h4>
+            Define que el contenido de la etiqueta
+debe resaltarse con una voz enfática en
+un contexto de accesibilidad. Visualmente
+se presenta con itálicas por defecto.
+         </div>
+         <div class="ficha-sintaxis ficha-bloque mitad">
+             <h4>Sintaxis</h4>
+             <pre>
+&lt;em&gt; Texto con voz enfática para herramientas
+de accesibilidad &lt;/em&gt;
+             </pre>
+         </div>
+         <div class="ficha-estilos ficha-bloque mitad">
+             <h4>Vista con Estilos</h4>
+             <div>
+                <em> Texto con voz enfática para herramientas
+                    de accesibilidad </em>
+             </div>
+         </div>
+    </article>
+
+    <article class="ficha">
+        <h3>strong</h3>
+        <div class="ficha-descripcion ficha-bloque">
+            <h4>Descripción</h4>
+            Define que el contenido de la etiqueta
+            debe resaltarse con una voz fuerte en un
+            contexto de accesibilidad. Visualmente se
+            presenta con negritas por defecto.
+         </div>
+         <div class="ficha-sintaxis ficha-bloque mitad">
+             <h4>Sintaxis</h4>
+             <pre>
+&lt;strong&gt; Texto con voz fuerte para
+herramientas de accesibilidad &lt;/strong&gt;
+             </pre>
+         </div>
+         <div class="ficha-estilos ficha-bloque mitad">
+             <h4>Vista con Estilos</h4>
+             <div>
+                <strong> Texto con voz fuerte para
+                    herramientas de accesibilidad </strong>
+             </div>
+         </div>
+    </article>
+
+    <article class="ficha">
+        <h3>i</h3>
+        <div class="ficha-descripcion ficha-bloque">
+            <h4>Descripción</h4>
+            Estilo visual de texto en itálicas.
+         </div>
+         <div class="ficha-sintaxis ficha-bloque mitad">
+             <h4>Sintaxis</h4>
+             <pre>
+&lt;i&gt; Texto en itálicas &lt;/i&gt;
+             </pre>
+         </div>
+         <div class="ficha-estilos ficha-bloque mitad">
+             <h4>Vista con Estilos</h4>
+             <div>
+                <i> Texto en itálicas </i>
+             </div>
+         </div>
+    </article>
+
+    <article class="ficha">
+        <h3>b</h3>
+        <div class="ficha-descripcion ficha-bloque">
+            <h4>Descripción</h4>
+            Estilo visual de texto en negritas.
+         </div>
+         <div class="ficha-sintaxis ficha-bloque mitad">
+             <h4>Sintaxis</h4>
+             <pre>
+&lt;b&gt; Texto en negritas &lt;/b&gt;
+             </pre>
+         </div>
+         <div class="ficha-estilos ficha-bloque mitad">
+             <h4>Vista con Estilos</h4>
+             <div>
+                <b> Texto en negritas </b>
+             </div>
+         </div>
+    </article>
+
+    <article class="ficha">
+        <h3>br</h3>
+        <div class="ficha-descripcion ficha-bloque">
+            <h4>Descripción</h4>
+            Establece un salto de línea.
+         </div>
+         <div class="ficha-sintaxis ficha-bloque">
+             <h4>Sintaxis</h4>
+             <pre>
+&lt;br&gt;
+             </pre>
+         </div>
+    </article>
+
+   </section>
+   <footer>
+       <p>Guía Básica HTML5 - 2021</p>
+   </footer>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía básica HTML - Esenciales</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script> </script>
+</head>
+<body>
+   <header>
+       <h1>
+        <a href="index.html">Guía Básica HTML 5</a>   
+        </h1>
+       <!-- Este es un cometario -->
+       <nav>
+           <ul>
+               <li><a id="btn-fundamentos" href="fundamentos.html">Fundamentos</a></li>
+               <li><a id="btn-esenciales" class="activo" href="esenciales.html">Esenciales</a></li>
+               <li><a id="btn-semantica" href="semantica.html">Semántica</a></li>
+               <li><a id="btn-texto" href="texto.html">Texto</a></li>
+               <li><a id="btn-multimedia" href="multimedia.html">Multimedia</a></li>
+               <li><a id="btn-datos" href="datos.html">Datos</a></li>
+               <li><a id="btn-formulario" href="formulario.html">Formulario</a></li>
+           </ul>
+
+       </nav>
+
+   </header>
+   <section id="contenido">
+       <article class="sec-presentacion" id="sec-esenciales">
+           <div class="sec-presentacion-imagen"></div>
+           <div class="sec-presentacion-texto">
+               <h2>Esenciales</h2>
+               <p>Etiquetas indispensables para el despliegue correcto de una página HTML en un navegador Web, en esta categoría se encuentran las etiquetas que conforman la
+                estructura básica de un documento HTML apegado a buenas prácticas.</p>
+           </div>
+       </article>
+
+       <article class="ficha">
+           <h3 class="titulo-xl">!doctype html</h3>
+           <div class="ficha-descripcion ficha-bloque">
+               <h4>Descripción</h4>
+               Declara el tipo de documento y define que está bajo el estándar de HTML 5.
+            </div>
+            <div class="ficha-sintaxis ficha-bloque">
+                <h4>Sintaxis</h4>
+                <pre>
+&lt;!doctype html&gt;
+                </pre>
+            </div>
+       </article>
+
+    <article class="ficha">
+        <h3>html</h3>
+        <div class="ficha-descripcion ficha-bloque">
+            <h4>Descripción</h4>
+            Es el contenedor de todos los elementos, visuales y no visuales, que componen la página. Es la etiqueta raíz o
+padre de todas las demás etiquetas, por lo tanto, todos demás elementos deben ser descendientes de esta etiqueta.
+         </div>
+         <div class="ficha-atributos ficha-bloque mitad">
+            <h4>Atributos estacados</h4>
+            <b>lang:</b> Señala el idioma del contenido del documento, en este caso (español) se emplea "es" o "es-MX", según la norma
+ISO 639-1
+         </div>
+         <div class="ficha-sintaxis ficha-bloque mitad">
+             <h4>Sintaxis</h4>
+             <pre>
+&lt;html lang="es-MX"&gt;
+  &lt;!-- Contenido del documento HTML --&gt;
+&lt;/html&gt;
+             </pre>
+         </div>
+    </article>
+
+    <article class="ficha">
+        <h3>head</h3>
+        <div class="ficha-descripcion ficha-bloque">
+            <h4>Descripción</h4>
+            Contiene información básica y de referencia para la página, como el título y la meta información (descripción, charset, autor, etc.), además de links, estilos y/o scripts necesarios para el despliegue 
+            y funcionamiento de la misma. Por defecto es un elemento no visible y no debe confundirse con la etiqueta semántica <span class="etiqueta-inline">header</span>.
+         </div>
+         <div class="ficha-etiquetas ficha-bloque mitad">
+            <h4>Etiquetas Secundarias</h4>
+            <ul class="listado-etiquetas">
+                <li><b>title</b>: Su función es definir el título de la página, que será visible en el marco de la ventana o en la pestaña del navegador.</li>
+                <li><b>link</b>: Usada para enlazar elementos externos con el documento HTML actual.
+                Por ejemplo, favicons y hojas de estilo CSS.</li>
+                <li><b>meta</b>: Se utiliza para definir metadatos del documento o sitio completo. El tipo, valores y contenido de los meta se define como atributo de la etiqueta.</li> 
+            </ul>
+         </div>
+         <div class="ficha-sintaxis ficha-bloque mitad">
+             <h4>Sintaxis</h4>
+             <pre>
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt; Título de la página &lt;/title&gt;
+  &lt;link rel="stylesheet" href="hoja-de-estilos.css"&gt;
+&lt;/head&gt;
+             </pre>
+         </div>
+    </article>
+
+    <article class="ficha">
+        <h3>body</h3>
+        <div class="ficha-descripcion ficha-bloque">
+            <h4>Descripción</h4>
+            Constituye el cuerpo de la página. Al interior de esta etiqueta se cargará todo el
+contenido visible del documento, como textos, imágenes, tablas, videos, etc.
+         </div>
+         <div class="ficha-sintaxis ficha-bloque">
+             <h4>Sintaxis</h4>
+             <pre>
+&lt;body&gt;
+  &lt;!-- Contenido visible de la página --&gt;
+&lt;/body&gt;
+             </pre>
+         </div>
+    </article>
+
+   </section>
+   <footer>
+       <p>Guía Básica HTML5 - 2021</p>
+   </footer>
+</body>
+</html>

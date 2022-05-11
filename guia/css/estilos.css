@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Open+Sans:wght@400;700&display=swap');
+
+:root{
+    /* Colores */
+    --cPrincipal:#e44d26;
+    --cSecundario:#1f2530;
+    --cEnfasis:#f16529;
+    --cContraste:#4f6272;
+    --cNeutral:#a8aeb0;
+    --cFondo:#ebebeb;
+
+
+    /* Fuentes */
+    --codigo:'Inconsolata', monospace;
+    --texto: 'Open Sans', sans-serif;
+}
+*{
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--cFondo);
+    color: var(--cContraste);
+    font-family: var(--texto);
+    font-size: 16px;
+}
+footer{
+    background-color: var(--cNeutral);
+    color: var(--cSecundario);
+    font-size: .85em;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+}
+#contenido{
+    margin: 1em auto;
+    width: 75%;
+}
+header{
+    align-items: center;
+    -webkit-box-shadow: 0 40px 60px -40px rgba(0,0,0,.4);
+    box-shadow: 0 40px 60px -40px rgba(0,0,0,.4);
+    display: flex;
+    height: 6em;
+    justify-content: space-between;
+}
+header h1{
+    /* background-image: url(../img/logo-guia-horizontal.svg);
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;  */
+    background: url(../img/logo-guia-horizontal.svg) no-repeat center/90%;
+    height: 100%;
+    width: 8em;
+}
+header h1 a{
+    display: block;
+    height: 100%;
+    text-indent: -9999px;
+}
+nav a, h2, h3, h4, pre{
+    font-family: var(--codigo);
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul a{
+    background-position: center .75rem;
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    border-radius: .5rem;
+    color: var(--cSecundario);
+    display: block;
+    font-size: .9em;
+    height: 4rem;
+    /* padding-top: 2.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0; */
+    /* 
+    padding: top-bottom-Left-right; (solo un valor)
+    padding: top-bottom Left-right; (dos valores)
+    padding: top left-rigth bottom; (tres valores)
+    padding: top right bottom left; (4 valores) */
+    padding: 2.5rem 1rem 0;
+    text-decoration: none;
+    transition: 250ms all ease-in-out;
+}
+nav ul a.activo,
+nav ul a:hover{
+    background-color: #fff;
+    background-position: center .5rem;
+    background-size: 2rem;
+    color: var(--cEnfasis);
+
+}
+nav ul a.activo{
+    background-color: var(--cEnfasis);
+    color: #fff;
+}
+nav ul a#btn-fundamentos{
+    background-image: url(../img/icon-fundamentos-gray.png);
+}
+nav ul a#btn-esenciales{
+    background-image: url(../img/icon-esenciales-gray.png);
+}
+nav ul a#btn-semantica{
+    background-image: url(../img/icon-semantica-gray.png);
+}
+nav ul a#btn-texto{
+    background-image: url(../img/icon-texto-gray.png);
+}
+nav ul a#btn-multimedia{
+    background-image: url(../img/icon-multimedia-gray.png);
+}
+nav ul a#btn-datos{
+    background-image: url(../img/icon-datos-gray.png);
+}
+nav ul a#btn-formulario{
+    background-image: url(../img/icon-formulario-gray.png);
+}
+
+nav ul a#btn-fundamentos.activo{
+    background-image: url(../img/icon-fundamentos.png);
+}
+nav ul a#btn-esenciales.activo{
+    background-image: url(../img/icon-esenciales.png);
+}
+nav ul a#btn-semantica.activo{
+    background-image: url(../img/icon-semantica.png);
+}
+nav ul a#btn-texto.activo{
+    background-image: url(../img/icon-texto.png);
+}
+nav ul a#btn-multimedia.activo{
+    background-image: url(../img/icon-multimedia.png);
+}
+nav ul a#btn-datos.activo{
+    background-image: url(../img/icon-datos.png);
+}
+nav ul a#btn-formulario.activo{
+    background-image: url(../img/icon-formulario.png);
+}
+nav ul a::after,
+nav ul a::before{
+    font-weight: bold;
+    padding: 1px;
+}
+nav ul a::after,
+.sec-presentacion-texto h2::after,
+.ficha > h3::after,
+.listado-etiquetas b::after,
+.etiqueta-inline::after{
+    content: ">";
+}
+nav ul a::before,
+.sec-presentacion-texto h2::before,
+.ficha > h3::before,
+.listado-etiquetas b::before,
+.etiqueta-inline::before{
+    content: "<";
+}
+.ficha h3::after,
+.ficha h3::before{
+    color: var(--cEnfasis);
+    font-size: .8em;
+}
+
+/* Estilos presentación de sección  */
+.sec-presentacion{
+    align-items: center;
+    display: flex;
+    height: 45vh;
+}
+.sec-presentacion-imagen{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 22em;
+}
+#sec-datos .sec-presentacion-imagen{
+    background-image: url(../img/shield-datos.png);
+}
+#sec-esenciales .sec-presentacion-imagen{
+    background-image: url(../img/shield-esenciales.png);
+}
+#sec-multimedia .sec-presentacion-imagen{
+    background-image: url(../img/shield-multimedia.png);
+}
+#sec-semantica .sec-presentacion-imagen{
+    background-image: url(../img/shield-semantica.png);
+}
+#sec-texto .sec-presentacion-imagen{
+    background-image: url(../img/shield-texto.png);
+}
+#sec-formulario .sec-presentacion-imagen{
+    background-image: url(../img/shield-formulario.png);
+}
+.sec-presentacion-texto{
+    width: calc(100% - 22em);
+}
+.sec-presentacion-texto h2{
+    color: var(--cContraste);
+    font-size: 3em;
+    margin-bottom: .25em;
+}
+.sec-presentacion-texto p{
+    font-size: 1.5em;
+    line-height: 1.6;
+}
+
+/* estilos para las fichas */
+ul.lista-atributos{
+    list-style: none;
+}
+ul.lista-atributos li{
+    margin-bottom: .5em;
+}
+.etiqueta-inline{
+    color: var(--cPrincipal);
+}
+.ficha{
+    background-color: #fff;
+    border-radius: 2em;
+    box-shadow: 0 0 30px -10px rgba(31,37,41,.4);
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto 2.5em;
+    overflow: hidden;
+    width: 81%;
+}
+.ficha > h3{
+    align-items: center;
+    background: var(--cContraste);
+    color: #fff;
+    display: flex;
+    font-size: 4.5vw;
+    justify-content: center;
+    padding: .5rem;
+    width: 40%;
+}
+.ficha h3.titulo-xl{
+    font-size: 2.2vw;
+}
+.ficha .ficha-bloque > h4{
+    color: var(--cPrincipal);
+    font-size: 1.25em;
+    margin-bottom: .5em;
+    text-align: center;
+}
+.ficha .listado-etiquetas{
+    list-style: none;
+}
+.ficha .listado-etiquetas li{
+    margin-bottom: .5em;
+}
+.ficha-bloque{
+    padding: 1em 1.5em;
+    width: 100%;
+}
+.ficha-bloque.borde-inferior{
+    border-bottom: 1px solid var(--cNeutral);
+}
+.ficha-bloque.mitad{
+    width: 50%;
+}
+.ficha-atributos + .ficha-etiquetas{
+    border-left: 1px solid var(--cNeutral);
+}
+.ficha-descripcion{
+    border-bottom: 1px solid var(--cNeutral);
+    width: 60%;
+}
+.ficha-sintaxis{
+    background-color: var(--cSecundario);
+}
+.ficha-sintaxis pre{
+    color: var(--cFondo);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+.lista-atributos ul{
+    margin-left: 2em;
+    margin-top: .5em;
+}
+/* -------------------------- Vistas con estilos -------------------------------------*/
+/* Texto */
+.ficha-estilos h1{
+    border: 1px dashed var(--cPrincipal);
+    color: var(--cPrincipal);
+    padding: 1em;
+    text-align: center;
+}
+.ficha-estilos h2{
+    border-bottom: 1px dotted var(--cSecundario);
+    border-left: 3px double var(--cSecundario);
+    padding: 1em;
+}
+.ficha-estilos h3{
+    /* VERSALITAS */
+    font-variant: small-caps;
+}
+.ficha-estilos div h4{
+    text-transform: uppercase;
+}
+.ficha-estilos p{
+    border-radius: 2em 0 2em 0;
+    -webkit-box-shadow:inset 0 0 30px 0 #aaa;
+    box-shadow:inset 0 0 30px 0 #aaa;
+    padding: 2em;
+}
+.ficha-estilos a{
+    display: block;
+    margin: .5em 0;
+    text-decoration: none;
+}
+.ficha-estilos a.enlace-1{
+    color: var(--cContraste);
+}
+.ficha-estilos a.enlace-1:hover{
+    color: var(--cPrincipal);
+    text-decoration: underline;
+}
+.ficha-estilos a.enlace-2{
+    background-color: var(--cNeutral);
+    border: 1px solid transparent;
+    border-radius: .5em; 
+    color: var(--cContraste);
+    display: inline-block;
+    padding: 1em 1.25em; 
+    transition: all 250ms ease-in-out;
+}
+.ficha-estilos a.enlace-2:hover{
+    background: transparent;
+    border: 1px solid var(--cPrincipal);
+    color: var(--cPrincipal);
+}
+.ficha-estilos a.enlace-3{
+    cursor: progress;
+}
+/* Multimedia */
+.ficha-estilos img,
+.ficha-estilos video{
+    max-width: 100%;
+}
+.ficha-estilos iframe{
+    display: block;
+    height: 20em;
+    margin: 0 auto;
+    width: 75%;
+}
+
+/* Datos */
+.ficha-estilos div > ol{
+    list-style: upper-alpha;
+    margin: 1em 0 1em 2em;
+}
+.ficha-estilos ul{
+    list-style: none;
+    margin: 1em 0 1em 2em;
+}
+.ficha-estilos ol ol{
+    list-style: lower-alpha;
+    margin-left: 1em;
+}
+.ficha-estilos ul ul{
+    margin: 0 0 0 2em;
+}
+.ficha-estilos ul li::before{
+    color: var(--cPrincipal);
+    /* content: "♬"; */
+}
+.ficha-estilos ul ul li{
+    align-items: center;
+    display: flex;
+}
+.ficha-estilos ul ul li::before{
+    background-color: var(--cPrincipal);
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    height: .5em;
+    margin-right: .5em;
+    width: .5em;
+}
+.ficha-estilos table{
+    border: 1px solid var(--cNeutral);
+    margin: 1em auto;
+    width: 75%;
+}
+.ficha-estilos table th{
+    background-color: var(--cPrincipal);
+    color: #fff;
+    padding: .25em;
+}
+.ficha-estilos table td{
+    padding: .25em;
+}
+.ficha-estilos table tr:nth-child(even) td{
+    /* even= celdas pares / odd= celdas nones / número= celda o elemento correspondiente*/
+    background-color: var(--cFondo);
+}
+
+/* formulario */
+.ficha-estilos fieldset,
+.ficha-estilos legend{
+    border: 1px solid var(--cPrincipal);
+    border-radius: .5em;
+    padding: .5em;
+}
+.ficha-estilos legend{
+    color: var(--cPrincipal);
+}
+.ficha-estilos label{
+    color: var(--cSecundario);
+    display: block;
+    margin-top: .5em;
+}
+.ficha-estilos .campo{
+    border: 1px solid var(--cContraste);
+    border-radius: .5em;
+    color: var(--cSecundario);
+    padding: .5em;
+    transition: all 500ms ease-in-out; 
+}
+.ficha-estilos .campo:focus{
+    border: 1px solid var(--cEnfasis);
+}
+.ficha-estilos input[type="checkbox"],
+.ficha-estilos input[type="radio"]{
+    display: none;
+}
+.ficha-estilos input[type="checkbox"] + label{
+    align-items: center;
+    cursor: pointer;
+    display: inline-flex;
+    margin: .25em 0;
+}
+.ficha-estilos input[type="checkbox"] + label span{
+    background-color: var(--cNeutral);
+    border-radius: .5em;
+    display: block;
+    height: .75em;
+    margin-right: .5em;
+    position: relative;
+    width: 2em;
+}
+.ficha-estilos input[type="checkbox"] + label span::before{
+    background-color: var(--cContraste);
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 1em;
+    left: -.125em;
+    position: absolute;
+    top: -.125em;
+    transition: all 250ms ease-in-out;
+    width: 1em;
+}
+.ficha-estilos input[type="checkbox"]:checked + label{
+    color: var(--cPrincipal);
+}
+.ficha-estilos input[type="checkbox"]:checked + label span::before{
+    background-color: var(--cEnfasis);
+    left: 1em;
+}
+.ficha-estilos input[type="radio"] + label{
+    align-items: center;
+    background-color: var(--cFondo);
+    border-radius: 1px solid var(--cNeutral);
+    border-radius: .5em;
+    cursor: pointer;
+    display: inline-flex;
+    margin: .5em 0;
+    padding: .5em 1em .5em .75em;
+    transition: all 250ms ease-in-out;
+}
+.ficha-estilos input[type="radio"]:checked + label{
+    background-color: var(--cContraste);
+    border: 1px solid var(--cSecundario);
+    color: #fff;
+}
+.ficha-estilos input[type="radio"] + label::before{
+    border: 1px solid var(--cNeutral);
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 1em;
+    margin-right: .5em;
+    width: 1em;
+}
+.ficha-estilos input[type="radio"]:checked + label::before{
+    background-color: var(--cPrincipal);
+    border: 3px solid #fff;
+    height: calc(1em - 2px);
+    width: calc(1em - 2px);
+}
+.ficha-estilos textarea{
+    border: 1px solid var(--cNeutral);
+    border-radius: .5em;
+    color: var(--cContraste);
+    font-family: var(--texto);
+    height: 8em;
+    padding: 1em;
+    resize: none;
+    width: 25%;
+}
+.ficha-estilos textarea:focus{
+    border: 1px solid var(--cEnfasis);
+}
+.ficha-estilos select{
+    background: #fff;
+    border: 1px solid var(--cPrincipal);
+    color: var(--cPrincipal);
+    padding: 1em;
+}
